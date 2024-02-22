@@ -13,7 +13,7 @@ const Index = () => {
             <IconButton icon={colorMode === "light" ? <FaMoon /> : <FaSun />} onClick={toggleColorMode} aria-label="Toggle Dark Mode" />
 
             <Heading as="h1" size="2xl">
-              Cairo Flower Shop
+              N's Garden
             </Heading>
             <Text>Welcome to our online flower shop. We provide a beautiful selection of flowers for every occasion, with delivery in Cairo.</Text>
 
