@@ -8,8 +8,45 @@ const Index = () => {
   return (
     <ChakraProvider>
       <Box bg={useColorModeValue("gray.100", "gray.800")} minHeight="100vh">
+        <Box bg={useColorModeValue("brand.700", "gray.800")} py={2}>
+          <Container maxW="container.xl">
+            <HStack justify="space-between" align="center">
+              <Heading as="h1" size="lg" color={useColorModeValue("white", "gray.200")}>
+                N's Garden
+              </Heading>
+              <HStack spacing={4}>
+                <Link px={3} py={1} color={useColorModeValue("white", "gray.200")} href="#arrangements">
+                  Arrangements
+                </Link>
+                <Link px={3} py={1} color={useColorModeValue("white", "gray.200")} href="#services">
+                  Services
+                </Link>
+                <Link px={3} py={1} color={useColorModeValue("white", "gray.200")} href="#subscription">
+                  Subscription
+                </Link>
+                <Link px={3} py={1} color={useColorModeValue("white", "gray.200")} href="#testimonials">
+                  Testimonials
+                </Link>
+                <Link px={3} py={1} color={useColorModeValue("white", "gray.200")} href="#contact">
+                  Contact
+                </Link>
+              </HStack>
+            </HStack>
+          </Container>
+        </Box>
         <Container maxW="container.xl" p={4}>
           <VStack spacing={4} align="flex-start">
+            <Box position="relative" borderRadius="lg" overflow="hidden">
+              <Image src="https://via.placeholder.com/1200x600?text=Hero+Image" alt="Hero Image" w="full" />
+              <Box position="absolute" top="50%" left="50%" transform="translate(-50%, -50%)">
+                <Heading as="h2" size="2xl" color="white" textAlign="center">
+                  Beautiful Flowers Delivered
+                </Heading>
+                <Button mt={4} size="lg" bg="brand.800" color="white" _hover={{ bg: "brand.900" }}>
+                  Shop Now
+                </Button>
+              </Box>
+            </Box>
             <IconButton icon={colorMode === "light" ? <FaMoon /> : <FaSun />} onClick={toggleColorMode} aria-label="Toggle Dark Mode" />
 
             <Heading as="h1" size="2xl">
